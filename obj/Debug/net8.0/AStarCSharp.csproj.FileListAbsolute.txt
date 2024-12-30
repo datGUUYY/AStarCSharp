@@ -1,0 +1,14 @@
+C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\AStarCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\AStarCSharp.AssemblyInfoInputs.cache
+C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\AStarCSharp.AssemblyInfo.cs
+C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\AStarCSharp.csproj.CoreCompileInputs.cache
+C:\Users\treym\Documents\AStarCSharp\bin\Debug\net8.0\AStarCSharp.exe
+C:\Users\treym\Documents\AStarCSharp\bin\Debug\net8.0\AStarCSharp.deps.json
+C:\Users\treym\Documents\AStarCSharp\bin\Debug\net8.0\AStarCSharp.runtimeconfig.json
+C:\Users\treym\Documents\AStarCSharp\bin\Debug\net8.0\AStarCSharp.dll
+C:\Users\treym\Documents\AStarCSharp\bin\Debug\net8.0\AStarCSharp.pdb
+C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\AStarCSharp.dll
+C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\refint\AStarCSharp.dll
+C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\AStarCSharp.pdb
+C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\AStarCSharp.genruntimeconfig.cache
+C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\ref\AStarCSharp.dll
