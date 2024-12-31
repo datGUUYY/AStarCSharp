@@ -12,3 +12,4 @@ C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\refint\AStarCSharp.dll
 C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\AStarCSharp.pdb
 C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\AStarCSharp.genruntimeconfig.cache
 C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\ref\AStarCSharp.dll
+C:\Users\treym\Documents\AStarCSharp\obj\Debug\net8.0\AStarCSharp.sourcelink.json
