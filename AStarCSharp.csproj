@@ -7,4 +7,13 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <!--
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="EightPuzzleCloneable.cs" />
+    <Compile Include="StateNode.cs" />
+  </ItemGroup>
+  -->
+  
+
 </Project>

@@ -117,8 +117,9 @@ namespace TilePuzzle
         private SortedSet<EightPuzzleStateNode> open;
         private HashSet<EightPuzzleStateNode> closed;
         
-    public static void main(String []args)
+    public static void Main(String []args)
 	{
+        Console.WriteLine("Hello World");
 		Solver solver = new Solver();
 		solver.Solve();
 	}   
