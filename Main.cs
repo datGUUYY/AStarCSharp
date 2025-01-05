@@ -18,7 +18,7 @@ namespace TilePuzzle
         }
         public void Solve()
         {
-            
+
             while (open.Count > 0)
             {
                 process();
@@ -33,9 +33,9 @@ namespace TilePuzzle
             current.InsertChildren(temp);
             foreach (EightPuzzleStateNode child in temp)
             {
-                if ( child.body.Rank == child.target.Rank &&
+                if (child.body.Rank == child.target.Rank &&
            Enumerable.Range(0, child.body.Rank).All(d => child.body.GetLength(d) == child.target.GetLength(d)) &&
-           child.body.Cast<int>().SequenceEqual(child.target.Cast<int>())) 
+           child.body.Cast<int>().SequenceEqual(child.target.Cast<int>()))
                 {   //TODO: make a function for the above line
                     printback(child);
                     solved = true;
@@ -81,7 +81,7 @@ namespace TilePuzzle
                 {
                     for (int j = 0; j < 5; j++)
                     {
-                        foreach (int x in GetRow(line[j].body,i)) 
+                        foreach (int x in GetRow(line[j].body, i))
                         {
                             Console.Write(x + " ");
                         }
@@ -93,36 +93,36 @@ namespace TilePuzzle
             }
             while (outputStack.Count != 0)
             {
-                
+
                 int[,] value = outputStack.Pop().body;
                 // foreach (int[] a in value) 
                 // {
-                    foreach (int b in value)
-                        Console.Write(b + " ");
-                    Console.WriteLine();
+                foreach (int b in value)
+                    Console.Write(b + " ");
+                Console.WriteLine();
                 // }
                 Console.WriteLine();
             }
         }
-         public static int[] GetRow(int[,] array, int row) //TODO: Implement as top-level function
-    {
-        int cols = array.GetLength(1);
-        int[] result = new int[cols];
-        for (int i = 0; i < cols; i++)
+        public static int[] GetRow(int[,] array, int row) //TODO: Implement as top-level function
         {
-            result[i] = array[row, i];
+            int cols = array.GetLength(1);
+            int[] result = new int[cols];
+            for (int i = 0; i < cols; i++)
+            {
+                result[i] = array[row, i];
+            }
+            return result;
         }
-        return result;
-    }
-        private SortedSet<EightPuzzleStateNode> open;
-        private HashSet<EightPuzzleStateNode> closed;
-        
-    public static void Main(String []args)
-	{
-        Console.WriteLine("Hello World");
-		Solver solver = new Solver();
-		solver.Solve();
-	}   
+        protected SortedSet<EightPuzzleStateNode> open; //TODO: Make these private again.
+        protected HashSet<EightPuzzleStateNode> closed;
+
+        // public static void Main(String[] args)
+        // {
+        //     Console.WriteLine("Hello World");
+        //     Solver solver = new Solver();
+        //     solver.Solve();
+        // }
     }
 
     public class EightPuzzleStateNodeComparer : IComparer<EightPuzzleStateNode>

@@ -42,7 +42,18 @@ namespace TilePuzzle
 
         public void InsertChildren(ICollection<EightPuzzleStateNode> target)
         {
-            // Implementation of InsertChildren method
+            // Takes a given state of the eight puzzle and generates a new state for all possible moves from that state.
+        
+            List<int> moves = new List<int>();
+            insertMoves(moves);
+            foreach (int move in moves)
+            {
+                EightPuzzleStateNode newState = new EightPuzzleStateNode(this);
+                newState.takeMove(move);
+                newState.SetDVal();
+                newState.SetHVal();
+                target.Add(newState);
+            }
         }
     }
 }

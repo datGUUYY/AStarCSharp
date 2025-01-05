@@ -31,6 +31,7 @@ namespace TilePuzzle
                     this.target[i, j] = parent.target[i, j];
                 }
             }
+            this.parent = parent;
         }
         protected int manhattan()
 	{
