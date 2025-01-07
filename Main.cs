@@ -6,6 +6,7 @@ namespace TilePuzzle
     public class Solver
     {
         protected bool solved;
+
         public Solver()
         {
             int[,] start = { { 1, 5, 2 }, { 6, 3, 8 }, { 0, 7, 4 } };
@@ -129,7 +130,12 @@ namespace TilePuzzle
     {
         public int Compare(EightPuzzleStateNode o1, EightPuzzleStateNode o2)
         {
-            return o1.GetValue() - o2.GetValue();
+            int value = o1.GetValue() - o2.GetValue();
+            if(value == 0)
+            {
+                return o1.id.CompareTo(o2.id);
+            }
+            return value;
         }
     }
 

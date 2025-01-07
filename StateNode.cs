@@ -15,6 +15,7 @@ namespace TilePuzzle
     {
         protected int HVal;
         public int DVal; //TODO: Make this protected, replace with accessor
+        public Guid id {get;} = Guid.NewGuid();
         public EightPuzzleStateNode(EightPuzzleStateNode parent) : base(parent)
         {
         }

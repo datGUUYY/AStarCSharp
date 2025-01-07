@@ -73,12 +73,14 @@ namespace TilePuzzle
         private void checkAgainstJava(int[,] current)
         {
             //Compare to the temp list in the currently working java implementation
-            int[,] checkCurrent = checkTemp[count];
-            if (current.Rank != checkCurrent.Rank || Enumerable.Range(0, current.Rank).All(d => current.GetLength(d) != checkCurrent.GetLength(d)) || !current.Cast<int>().SequenceEqual(checkCurrent.Cast<int>()))
-            {
-                Console.WriteLine("Error: " + count);
-            }
-            count++;
+            // int[,] checkCurrent = checkTemp[count];
+            // if (current.Rank != checkCurrent.Rank || Enumerable.Range(0, current.Rank).All(d => current.GetLength(d) != checkCurrent.GetLength(d)) || !current.Cast<int>().SequenceEqual(checkCurrent.Cast<int>()))
+            // {
+            //     Console.WriteLine("Error: " + count);
+            // }
+            // count++;
+
+            //This method is no longer necessary, as the java implementation will be different from the C# implementation.
         }
     }
 
