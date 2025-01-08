@@ -5,7 +5,6 @@ namespace TilePuzzle
     public class EightPuzzle
     {
         public int[,] body = new int[3, 3];
-        //I have no idea how the java version of this code worked.
 
         public EightPuzzle()
         {
@@ -28,10 +27,8 @@ namespace TilePuzzle
             }
         }
 
-        public void insertMoves(List<int> target) //TODO test if Collection is a valid type
+        public void insertMoves(List<int> target)
         {
-            //TODO: refactor into generic //didnt need to do?
-            
             int empty = GetEmpty();
             if (empty > 2) target.Add(empty - 3);
             if (empty % 3 > 0) target.Add(empty - 1);

@@ -118,16 +118,17 @@ namespace TilePuzzle
         protected SortedSet<EightPuzzleStateNode> open; //TODO: Make these private again.
         protected HashSet<EightPuzzleStateNode> closed;
 
-        // public static void Main(String[] args)
-        // {
-        //     Console.WriteLine("Hello World");
-        //     Solver solver = new Solver();
-        //     solver.Solve();
-        // }
+        public static void Main(String[] args)
+        {
+            Console.WriteLine("Hello World");
+            Solver solver = new Solver();
+            solver.Solve();
+        }
     }
 
     public class EightPuzzleStateNodeComparer : IComparer<EightPuzzleStateNode>
     {
+        //TODO: unit tests for this method.
         public int Compare(EightPuzzleStateNode o1, EightPuzzleStateNode o2)
         {
             int value = o1.GetValue() - o2.GetValue();
@@ -142,21 +143,3 @@ namespace TilePuzzle
 
 
 }
-
-// public class EightPuzzleStateNode
-// {
-//     private int[,] start;
-//     private int[,] end;
-
-//     public EightPuzzleStateNode(int[,] start, int[,] end)
-//     {
-//         this.start = start;
-//         this.end = end;
-//     }
-
-//     public int GetValue()
-//     {
-//         // Implementation of the GetValue method
-//         return 0;
-//     }
-// }
