@@ -13,7 +13,7 @@ namespace TilePuzzle
 
     public class EightPuzzleStateNode : EightPuzzleCloneable<EightPuzzleStateNode>, IStateNode<EightPuzzleStateNode>
     {
-        protected int HVal;
+        public int HVal { get; protected set; }
         public int DVal; //TODO: Make this protected, replace with accessor
         public Guid id {get;} = Guid.NewGuid();
         public EightPuzzleStateNode(EightPuzzleStateNode parent) : base(parent)
