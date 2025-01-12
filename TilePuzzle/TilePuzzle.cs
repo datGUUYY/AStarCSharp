@@ -8,9 +8,9 @@ namespace TilePuzzle
 
         public EightPuzzle()
         {
-            for (int i = 1; i < 9; i++)
+            for (int i = 0; i < 8; i++)
             {
-                body[i / 3, i % 3] = i;
+                body[i / 3, i % 3] = i + 1;
             }
             body[2, 2] = 0;
         }
@@ -46,7 +46,7 @@ namespace TilePuzzle
             throw new InvalidOperationException("Empty tile not found.");
         }
 
-        public void takeMove(int i)
+        public void TakeMove(int i)
         {
             int empty = GetEmpty();
             int inner = body.GetLength(1);

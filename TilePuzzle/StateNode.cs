@@ -50,7 +50,7 @@ namespace TilePuzzle
             foreach (int move in moves)
             {
                 EightPuzzleStateNode newState = new EightPuzzleStateNode(this);
-                newState.takeMove(move);
+                newState.TakeMove(move);
                 newState.SetDVal();
                 newState.SetHVal();
                 target.Add(newState);

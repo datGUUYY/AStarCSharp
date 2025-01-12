@@ -15,7 +15,7 @@
             "type": "coreclr",
             "request": "launch",
             // "preLaunchTask": "build", //TODO: Uncomment this line to build on debug; add a task.json file
-            "program": "${workspaceFolder}/bin/Debug/net8.0/AStarCSharp.dll",
+            "program": "${workspaceFolder}/TilePuzzle/bin/Debug/net8.0/AStarCSharp.dll",
             "args": [],
             "cwd": "${workspaceFolder}/",
             "stopAtEntry": false,
