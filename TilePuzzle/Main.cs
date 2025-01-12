@@ -5,7 +5,7 @@ namespace TilePuzzle
 {
     public class Solver
     {
-        protected bool solved;
+        public bool Solved { get; protected set; }
 
         public Solver()
         {
@@ -15,7 +15,7 @@ namespace TilePuzzle
             open = new SortedSet<EightPuzzleStateNode>(new EightPuzzleStateNodeComparer());
             closed = new HashSet<EightPuzzleStateNode>();
             open.Add(origin);
-            solved = false;
+            Solved = false;
         }
         public void Solve()
         {
@@ -23,7 +23,7 @@ namespace TilePuzzle
             while (open.Count > 0)
             {
                 process();
-                if (solved) break;
+                if (Solved) break;
             }
         }
         public void process()
@@ -39,7 +39,7 @@ namespace TilePuzzle
            child.body.Cast<int>().SequenceEqual(child.target.Cast<int>()))
                 {   //TODO: make a function for the above line
                     printback(child);
-                    solved = true;
+                    Solved = true;
                     break;
                 }
                 checkClosed(child);
@@ -115,12 +115,12 @@ namespace TilePuzzle
             }
             return result;
         }
-        protected SortedSet<EightPuzzleStateNode> open; //TODO: Make these private again.
-        protected HashSet<EightPuzzleStateNode> closed;
+        //TODO: Friend assembly for testing
+        public SortedSet<EightPuzzleStateNode> open {get; protected set;}
+        public HashSet<EightPuzzleStateNode> closed {get; protected set;}
 
         public static void Main(String[] args)
         {
-            Console.WriteLine("Hello World");
             Solver solver = new Solver();
             solver.Solve();
         }
