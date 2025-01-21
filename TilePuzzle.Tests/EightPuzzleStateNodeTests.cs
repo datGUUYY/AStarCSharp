@@ -7,7 +7,7 @@ namespace TilePuzzle.Tests
     public class EightPuzzleStateNodeTests
     {
         [Fact]
-        public void SetHVal_SetsHeuristicValueCorrectly()
+        public void CalcHVal_SetsHeuristicValueCorrectly()
         {
             // Arrange
             int[,] start = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 0 } };
@@ -15,7 +15,7 @@ namespace TilePuzzle.Tests
             var node = new EightPuzzleStateNode(start, target);
 
             // Act
-            node.SetHVal();
+            node.CalcHVal();
 
             // Assert
             Assert.Equal(0, node.HVal); // Assuming heuristic value is 0 for solved state
@@ -23,7 +23,7 @@ namespace TilePuzzle.Tests
         }
 
         [Fact]
-        public void SetDVal_SetsDepthValueCorrectly()
+        public void CalcDVal_SetsDepthValueCorrectly()
         {
             // Arrange
             int[,] start = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 0 } };
@@ -31,7 +31,7 @@ namespace TilePuzzle.Tests
             var node = new EightPuzzleStateNode(start, target);
 
             // Act
-            node.SetDVal();
+            node.CalcDVal();
 
             // Assert
             Assert.Equal(0, node.DVal);
@@ -44,8 +44,8 @@ namespace TilePuzzle.Tests
             int[,] start = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 0 } };
             int[,] target = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 0 } };
             var node = new EightPuzzleStateNode(start, target);
-            node.SetHVal();
-            node.SetDVal();
+            node.CalcHVal();
+            node.CalcDVal();
 
             // Act
             int value = node.GetValue();

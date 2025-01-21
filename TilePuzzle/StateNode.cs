@@ -6,8 +6,8 @@ namespace TilePuzzle
     public interface IStateNode<t>
     {
         int GetValue();
-        void SetHVal();
-        void SetDVal();
+        void CalcHVal();
+        void CalcDVal();
         void InsertChildren(ICollection<t> target);
     }
 
@@ -24,12 +24,12 @@ namespace TilePuzzle
         {
         }
 
-        public void SetHVal()
+        public void CalcHVal()
         {
             HVal = manhattan();
         }
 
-        public void SetDVal()
+        public void CalcDVal()
         {
             DVal = (parent != null) ? parent.DVal + 1 : 0;
         }
@@ -51,8 +51,8 @@ namespace TilePuzzle
             {
                 EightPuzzleStateNode newState = new EightPuzzleStateNode(this);
                 newState.TakeMove(move);
-                newState.SetDVal();
-                newState.SetHVal();
+                newState.CalcDVal();
+                newState.CalcHVal();
                 target.Add(newState);
             }
         }

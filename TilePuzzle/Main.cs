@@ -96,12 +96,10 @@ namespace TilePuzzle
             {
 
                 int[,] value = outputStack.Pop().body;
-                // foreach (int[] a in value) 
-                // {
+                
                 foreach (int b in value)
                     Console.Write(b + " ");
                 Console.WriteLine();
-                // }
                 Console.WriteLine();
             }
         }
@@ -128,7 +126,6 @@ namespace TilePuzzle
 
     public class EightPuzzleStateNodeComparer : IComparer<EightPuzzleStateNode>
     {
-        //TODO: unit tests for this method.
         public int Compare(EightPuzzleStateNode o1, EightPuzzleStateNode o2)
         {
             int value = o1.GetValue() - o2.GetValue();
