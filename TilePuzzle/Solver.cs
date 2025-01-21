@@ -19,7 +19,6 @@ namespace TilePuzzle
         }
         public void Solve()
         {
-
             while (open.Count > 0)
             {
                 process();
@@ -96,7 +95,7 @@ namespace TilePuzzle
             {
 
                 int[,] value = outputStack.Pop().body;
-                
+
                 foreach (int b in value)
                     Console.Write(b + " ");
                 Console.WriteLine();
@@ -117,6 +116,8 @@ namespace TilePuzzle
         public SortedSet<EightPuzzleStateNode> open {get; protected set;}
         public HashSet<EightPuzzleStateNode> closed {get; protected set;}
 
+
+        //TODO: Separate into a different class that extends Solver
         public static void Main(String[] args)
         {
             Solver solver = new Solver();
