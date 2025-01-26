@@ -3,9 +3,26 @@ using System.Collections.Generic;
 
 namespace TilePuzzle
 {
+  
     public class Solver
     {
         public bool Solved { get; protected set; }
+        
+        //TODO: move below function to a different class, like a utilities class.
+        bool ArrayDeepEquals(int[,] a, int[,] b)
+        {
+            if (a.GetLength(0) != b.GetLength(0) || a.GetLength(1) != b.GetLength(1))
+                return false;
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
+                {
+                    if (a[i, j] != b[i, j])
+                        return false;
+                }
+            }
+            return true;
+        }
 
         public Solver()
         {
@@ -49,9 +66,7 @@ namespace TilePuzzle
             foreach (EightPuzzleStateNode against in closed)
             {
 
-                if (against.body.Rank == checknode.body.Rank &&
-           Enumerable.Range(0, against.body.Rank).All(d => against.body.GetLength(d) == checknode.body.GetLength(d)) &&
-           against.body.Cast<int>().SequenceEqual(checknode.body.Cast<int>()))
+                if (ArrayDeepEquals(checknode.body, against.body))
                 {
                     if (checknode.DVal > against.DVal)
                     {
@@ -137,7 +152,4 @@ namespace TilePuzzle
             return value;
         }
     }
-
-
-
 }
