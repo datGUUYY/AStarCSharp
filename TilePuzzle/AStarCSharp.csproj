@@ -16,6 +16,10 @@
     </PackageReference>
   </ItemGroup>
 
+    <ItemGroup>
+    <ProjectReference Include="..\TilePuzzle.BusinessLogic\TilePuzzle.BusinessLogic.csproj" />
+  </ItemGroup>
+
   <!--
   <ItemGroup>
     <Compile Include="Main.cs" />

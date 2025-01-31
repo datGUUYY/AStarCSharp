@@ -133,11 +133,11 @@ namespace TilePuzzle
 
 
         //TODO: Separate into a different class that extends Solver
-        public static void Main(String[] args)
-        {
-            Solver solver = new Solver();
-            solver.Solve();
-        }
+        // public static void Main(String[] args)
+        // {
+        //     Solver solver = new Solver();
+        //     solver.Solve();
+        // }
     }
 
     public class EightPuzzleStateNodeComparer : IComparer<EightPuzzleStateNode>
@@ -150,6 +150,19 @@ namespace TilePuzzle
                 return o1.id.CompareTo(o2.id);
             }
             return value;
+        }
+    }
+
+    public class Program : Solver //TODO: rename?
+    {
+        //TODO: Move default constructor and other methods from base class to this class.
+        public Program() : base()
+        {
+        }
+        public static void Main(String [] args)
+        {
+            Program solver = new Program();
+            solver.Solve();
         }
     }
 }
