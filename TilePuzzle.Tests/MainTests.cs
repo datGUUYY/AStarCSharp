@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Xunit;
-using TilePuzzle;
+using TilePuzzleBusinessLogic;
 
 namespace TilePuzzleTest
 {

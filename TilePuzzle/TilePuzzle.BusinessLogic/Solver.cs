@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace TilePuzzle
+namespace TilePuzzleBusinessLogic
 {
   
     public class Solver

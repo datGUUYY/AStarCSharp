@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace TilePuzzle.Tests
+namespace TilePuzzleBusinessLogic.Tests
 {
     public class EightPuzzleTests
     {

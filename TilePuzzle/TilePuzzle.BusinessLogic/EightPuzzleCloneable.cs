@@ -1,6 +1,6 @@
 using System;
 
-namespace TilePuzzle
+namespace TilePuzzleBusinessLogic
 {
     public class EightPuzzleCloneable<T> : EightPuzzle where T : EightPuzzleCloneable<T>
     {
